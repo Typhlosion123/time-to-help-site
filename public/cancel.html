@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Cancelled - Time 2 Help</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cancel-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            animation: scaleIn 0.5s ease-out 0.2s both;
+            position: relative;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .cancel-x {
+            width: 60px;
+            height: 60px;
+            position: relative;
+        }
+
+        .cancel-x::before,
+        .cancel-x::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 5px;
+            background: white;
+            border-radius: 3px;
+            left: 5px;
+            top: 27.5px;
+        }
+
+        .cancel-x::before {
+            transform: rotate(45deg);
+        }
+
+        .cancel-x::after {
+            transform: rotate(-45deg);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .info-box p {
+            color: #92400e;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .reasons {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .reasons h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .reasons ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reasons li {
+            padding: 10px 0;
+            color: #666;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .reasons li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        .secondary-button {
+            display: inline-block;
+            color: #667eea;
+            padding: 16px 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            margin-left: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .secondary-button:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            max-width: 80px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .message {
+                font-size: 1.1rem;
+            }
+
+            .button, .secondary-button {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/time-2-help.png" alt="Time 2 Help Logo" class="logo">
+        
+        <div class="cancel-icon">
+            <div class="cancel-x"></div>
+        </div>
+        
+        <h1>Payment Cancelled</h1>
+        
+        <p class="message">
+            No worries! Your payment was cancelled and you haven't been charged anything. 
+            We're here whenever you're ready to commit to your screen time goals.
+        </p>
+
+        <div class="info-box">
+            <p><strong>Need help?</strong> If you experienced any issues during checkout or have questions about how Time 2 Help works, feel free to reach out to our support team.</p>
+        </div>
+
+        <div class="reasons">
+            <h3>Why commit with Time 2 Help?</h3>
+            <ul>
+                <li>Real accountability that actually works</li>
+                <li>Your "failures" help people in need</li>
+                <li>Set your own goals and bounty amounts</li>
+                <li>Cancel or adjust your commitment anytime</li>
+                <li>Join thousands building better habits</li>
+            </ul>
+        </div>
+
+        <p class="message" style="font-size: 1rem; color: #888;">
+            Remember: Even small bounties create meaningful accountability. Start with $1/day and adjust as you build confidence!
+        </p>
+
+        <a href="index.html" class="secondary-button">Back to Home</a>
+    </div>
+</body>
+</html>
